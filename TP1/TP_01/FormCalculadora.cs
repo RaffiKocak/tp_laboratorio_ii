@@ -56,7 +56,6 @@ namespace TP_01
             this.lbl_resultado.Text = "0";
             this.txt_numeroUno.Clear();
             this.txt_numeroDos.Clear();
-            this.lst_operaciones.Items.Clear();
             this.btn_convertirABinario.Enabled = false;
             this.btn_convertirADecimal.Enabled = false;
         }
