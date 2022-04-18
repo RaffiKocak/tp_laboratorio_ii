@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raffi\\Desktop\\Caca\\tp_laboratorio_ii\\TP1\\TP_01\\TP_01.csproj",
+      "projectUniqueName": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj",
       "projectName": "TP_01",
-      "projectPath": "C:\\Users\\raffi\\Desktop\\Caca\\tp_laboratorio_ii\\TP1\\TP_01\\TP_01.csproj",
+      "projectPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj",
       "packagesPath": "C:\\Users\\raffi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raffi\\Desktop\\Caca\\tp_laboratorio_ii\\TP1\\TP_01\\obj\\",
+      "outputPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\raffi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\raffi\\Desktop\\Caca\\tp_laboratorio_ii\\TP1\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\raffi\\Desktop\\Caca\\tp_laboratorio_ii\\TP1\\Entidades\\Entidades.csproj"
+            "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\Entidades\\Entidades.csproj"
             }
           }
         }
