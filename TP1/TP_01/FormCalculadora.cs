@@ -94,8 +94,8 @@ namespace TP_01
             this.txt_numeroUno.Text = this.txt_numeroUno.Text.Replace('.', ',');
             this.txt_numeroDos.Text = this.txt_numeroDos.Text.Replace('.', ',');
 
-            if (double.TryParse(this.txt_numeroUno.Text, out double numeroUno) && 
-                double.TryParse(this.txt_numeroDos.Text, out double numeroDos))
+            if (double.TryParse(this.txt_numeroUno.Text, out double numeroPrueba) && 
+                double.TryParse(this.txt_numeroDos.Text, out numeroPrueba))
             {
                 if (this.cmb_operador.Text == " ")
                 {
