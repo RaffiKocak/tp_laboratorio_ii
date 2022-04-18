@@ -1,0 +1,7 @@
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.csproj.AssemblyReference.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\TP_01.FormCalculadora.resources
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.csproj.GenerateResource.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.AssemblyInfoInputs.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.AssemblyInfo.cs
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TP1\TP_01\obj\Debug\net5.0-windows\FormCalculadora.csproj.CoreCompileInputs.cache

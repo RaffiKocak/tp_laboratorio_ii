@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj": {}
+    "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\FormCalculadora.csproj": {}
   },
   "projects": {
     "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\Entidades\\Entidades.csproj": {
@@ -58,12 +58,12 @@
         }
       }
     },
-    "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj": {
+    "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\FormCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj",
-        "projectName": "TP_01",
-        "projectPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\TP_01.csproj",
+        "projectUniqueName": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\FormCalculadora.csproj",
+        "projectName": "FormCalculadora",
+        "projectPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\FormCalculadora.csproj",
         "packagesPath": "C:\\Users\\raffi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\raffi\\source\\repos\\Kocak.Raffi.2D.TP1\\TP_01\\obj\\",
         "projectStyle": "PackageReference",

@@ -117,6 +117,7 @@
             // 
             this.lst_operaciones.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lst_operaciones.FormattingEnabled = true;
+            this.lst_operaciones.HorizontalScrollbar = true;
             this.lst_operaciones.ItemHeight = 25;
             this.lst_operaciones.Location = new System.Drawing.Point(359, 12);
             this.lst_operaciones.Name = "lst_operaciones";
