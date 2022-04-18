@@ -18,6 +18,7 @@ namespace Entidades
             char operadorARetornar;
             switch (operador)
             {
+                // asd
                 case '+':
                     operadorARetornar = '+';
                     break;
