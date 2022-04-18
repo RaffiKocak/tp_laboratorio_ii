@@ -97,14 +97,15 @@ namespace TP_01
             if (double.TryParse(this.txt_numeroUno.Text, out double numeroUno) && 
                 double.TryParse(this.txt_numeroDos.Text, out double numeroDos))
             {
+                if (this.cmb_operador.Text == " ")
+                {
+                    this.cmb_operador.SelectedIndex = 1;
+                }
                 resultado = Operar(this.txt_numeroUno.Text, this.txt_numeroDos.Text, cmb_operador.Text);
 
                 if (resultado != double.MinValue)
                 {
-                    if (this.cmb_operador.Text == " ")
-                    {
-                        this.cmb_operador.Text = "+";
-                    }
+                    
                     this.btn_convertirADecimal.Enabled = false;
                     this.btn_convertirABinario.Enabled = true;
                     sb.Append($"{this.txt_numeroUno.Text} ");
