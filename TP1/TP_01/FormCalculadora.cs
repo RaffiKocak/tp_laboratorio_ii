@@ -48,7 +48,7 @@ namespace TP_01
         }
 
         /// <summary>
-        /// Establece los TextBox, ComboBox y Label del formulario en su estado inicial.
+        /// Establece los TextBox, ComboBox, Botones y Label del formulario en su estado inicial.
         /// </summary>
         private void Limpiar()
         {
@@ -90,64 +90,40 @@ namespace TP_01
         {
             double resultado;
             StringBuilder sb = new StringBuilder();
-            bool noHayLetras = true;
-            
-            
-            foreach (char c in txt_numeroUno.Text)
-            {
-                if (char.IsLetter(c))
-                {
-                    noHayLetras = false;
-                    break;
-                }
-            }
 
-            foreach (char c in txt_numeroDos.Text)
-            {
-                if (char.IsLetter(c))
-                {
-                    noHayLetras = false;
-                    break;
-                }
-            }
+            this.txt_numeroUno.Text = this.txt_numeroUno.Text.Replace('.', ',');
+            this.txt_numeroDos.Text = this.txt_numeroDos.Text.Replace('.', ',');
 
-            if (!String.IsNullOrEmpty(txt_numeroUno.Text) && !String.IsNullOrEmpty(txt_numeroDos.Text))
+            if (double.TryParse(this.txt_numeroUno.Text, out double numeroUno) && 
+                double.TryParse(this.txt_numeroDos.Text, out double numeroDos))
             {
-                if (noHayLetras)
-                {
-                    this.txt_numeroUno.Text = this.txt_numeroUno.Text.Replace('.', ',');
-                    this.txt_numeroDos.Text = this.txt_numeroDos.Text.Replace('.', ',');
-                    resultado = Operar(this.txt_numeroUno.Text, this.txt_numeroDos.Text, cmb_operador.Text);
+                resultado = Operar(this.txt_numeroUno.Text, this.txt_numeroDos.Text, cmb_operador.Text);
 
-                    if (resultado != double.MinValue)
+                if (resultado != double.MinValue)
+                {
+                    if (this.cmb_operador.Text == " ")
                     {
-                        if (this.cmb_operador.Text == " ")
-                        {
-                            this.cmb_operador.Text = "+";
-                        }
-                        this.btn_convertirADecimal.Enabled = false;
-                        this.btn_convertirABinario.Enabled = true;
-                        sb.Append($"{this.txt_numeroUno.Text} ");
-                        sb.Append($"{this.cmb_operador.Text} ");
-                        sb.Append($"{this.txt_numeroDos.Text} = ");
-                        sb.Append($"{resultado}");
-                        lst_operaciones.Items.Add(sb.ToString());
-                        this.lbl_resultado.Text = resultado.ToString(); 
-                    } else
-                    {
-                        MessageBox.Show("No es posible dividir por 0.",
-                            "Operación inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }    
+                        this.cmb_operador.Text = "+";
+                    }
+                    this.btn_convertirADecimal.Enabled = false;
+                    this.btn_convertirABinario.Enabled = true;
+                    sb.Append($"{this.txt_numeroUno.Text} ");
+                    sb.Append($"{this.cmb_operador.Text} ");
+                    sb.Append($"{this.txt_numeroDos.Text} = ");
+                    sb.Append($"{resultado}");
+                    lst_operaciones.Items.Add(sb.ToString());
+                    this.lbl_resultado.Text = resultado.ToString(); 
                 } else
                 {
-                    MessageBox.Show("No es posible operar con letras.",
-                            "Operandos inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }  
-            } else 
+                    MessageBox.Show("No es posible dividir por 0.",
+                        "Operación inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }    
+            } else
             {
-                MessageBox.Show("No es posible realizar el cálculo sin 2 operandos.",
-                    "Sin operandos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                MessageBox.Show("Los operandos no son válidos.",
+                        "Operandos inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }  
+           
         }
 
         /// <summary>
