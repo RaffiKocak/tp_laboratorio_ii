@@ -48,7 +48,7 @@ namespace TP_01
         }
 
         /// <summary>
-        /// Establece todos los componentes del formulario en su estado inicial.
+        /// Establece los TextBox, ComboBox y Label del formulario en su estado inicial.
         /// </summary>
         private void Limpiar()
         {
