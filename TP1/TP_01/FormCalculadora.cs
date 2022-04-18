@@ -128,8 +128,6 @@ namespace TP_01
                         }
                         this.btn_convertirADecimal.Enabled = false;
                         this.btn_convertirABinario.Enabled = true;
-                        this.txt_numeroUno.Text = this.txt_numeroUno.Text.Replace(',', '.');
-                        this.txt_numeroDos.Text = this.txt_numeroDos.Text.Replace(',', '.');
                         sb.Append($"{this.txt_numeroUno.Text} ");
                         sb.Append($"{this.cmb_operador.Text} ");
                         sb.Append($"{this.txt_numeroDos.Text} = ");
