@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "Tipo": 0,
+    "Descripcion": "Alfajor Capitan del Espacio 40g",
+    "Precio": 100,
+    "Cantidad": 49
+  },
+  {
+    "Id": 2,
+    "Tipo": 0,
+    "Descripcion": "Alfajor Jorgito 55g",
+    "Precio": 120,
+    "Cantidad": 48
+  },
+  {
+    "Id": 3,
+    "Tipo": 0,
+    "Descripcion": "Alfajorcitos x6 Jorgito 155g",
+    "Precio": 200,
+    "Cantidad": 49
+  },
+  {
+    "Id": 4,
+    "Tipo": 1,
+    "Descripcion": "Coca-Cola 500ml",
+    "Precio": 100,
+    "Cantidad": 47
+  },
+  {
+    "Id": 5,
+    "Tipo": 1,
+    "Descripcion": "Coca-Cola 1.5l",
+    "Precio": 130,
+    "Cantidad": 50
+  },
+  {
+    "Id": 6,
+    "Tipo": 1,
+    "Descripcion": "Agua KIN 500ml",
+    "Precio": 100,
+    "Cantidad": 50
+  },
+  {
+    "Id": 7,
+    "Tipo": 2,
+    "Descripcion": "Pack x10 Figuritas Mundial 2022 VAMO MESSI",
+    "Precio": 80,
+    "Cantidad": 49
+  },
+  {
+    "Id": 8,
+    "Tipo": 2,
+    "Descripcion": "Preservativos PRIME x6 - Version Star Wars",
+    "Precio": 200,
+    "Cantidad": 50
+  },
+  {
+    "Id": 9,
+    "Tipo": 2,
+    "Descripcion": "Lucky Strike Box x20",
+    "Precio": 300,
+    "Cantidad": 49
+  },
+  {
+    "Id": 10,
+    "Tipo": 0,
+    "Descripcion": "Kit Kat Clasico 41,5g",
+    "Precio": 180,
+    "Cantidad": 29
+  }
+]

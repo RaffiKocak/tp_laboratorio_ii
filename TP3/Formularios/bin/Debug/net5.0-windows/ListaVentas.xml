@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVenta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Venta>
+    <Id>1</Id>
+    <FechaVenta>2022-06-05T15:58:41.1526122-03:00</FechaVenta>
+    <Precio>700</Precio>
+    <ProductosVendidos>
+      <string>Alfajor Jorgito 55g x 1
+Alfajor Capitan del Espacio 40g x 1
+Kit Kat Clasico 41,5g x 1
+Lucky Strike Box x20 x 1
+</string>
+    </ProductosVendidos>
+  </Venta>
+  <Venta>
+    <Id>2</Id>
+    <FechaVenta>2022-06-05T16:23:57.1752458-03:00</FechaVenta>
+    <Precio>700</Precio>
+    <ProductosVendidos>
+      <string>Coca-Cola 500ml x 3
+Alfajorcitos x6 Jorgito 155g x 1
+Alfajor Jorgito 55g x 1
+Pack x10 Figuritas Mundial 2022 VAMO MESSI x 1
+</string>
+    </ProductosVendidos>
+  </Venta>
+</ArrayOfVenta>

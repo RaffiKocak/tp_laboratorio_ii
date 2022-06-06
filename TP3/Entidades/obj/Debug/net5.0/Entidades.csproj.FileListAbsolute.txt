@@ -1,0 +1,15 @@
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\bin\Debug\net5.0\Excepciones.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\bin\Debug\net5.0\Excepciones.pdb
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Entidades\obj\Debug\net5.0\Entidades.csproj.CopyComplete
