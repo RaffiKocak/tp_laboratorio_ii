@@ -1,0 +1,12 @@
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.deps.json
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.pdb
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.csproj.AssemblyReference.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfoInputs.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfo.cs
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\refint\Excepciones.dll
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.pdb
+C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Excepciones\obj\Debug\net5.0\ref\Excepciones.dll
