@@ -24,7 +24,6 @@ C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\obj\Debug\net5.0-
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\obj\Debug\net5.0-windows\Formularios.FormCantidadPrecio.resources
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\Excepciones.dll
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\Excepciones.pdb
-C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\ultimoIdProducto.txt
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\ultimoIdVenta.txt
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
 C:\Users\raffi\source\repos\Kocak.Raffi.2D.TPFinal\Formularios\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll

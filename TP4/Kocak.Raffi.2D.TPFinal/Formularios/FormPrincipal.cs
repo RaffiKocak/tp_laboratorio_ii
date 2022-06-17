@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Excepciones;
+using System.Threading;
 
 namespace Formularios
 {
@@ -17,31 +18,87 @@ namespace Formularios
     {
         List<Producto> carritoProductos;
         float precioParcial;
+        CancellationTokenSource cts;
 
         public FormPrincipal()
         {
             InitializeComponent();
             carritoProductos = new List<Producto>();
             precioParcial = 0;
+            
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
+        private async void FormPrincipal_Load(object sender, EventArgs e)
         {
-            try
-            {
-                Logica.ActualizarDGV(dgv_productos, BaseDatos.TraerProductos());
-            } catch (Exception ex)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(ex.Message);
-                while (ex.InnerException != null)
+            //try
+            //{
+                cts = new CancellationTokenSource();
+                this.lbl_cargando.Text = "Conectando con base de datos...";
+                this.btn_agregarProducto.Enabled = false;
+                this.btn_agregarStock.Enabled = false;
+                this.btn_bajaProducto.Enabled = false;
+                this.btn_cambiarPrecio.Enabled = false;
+                this.btn_cancelarVenta.Enabled = false;
+                this.btn_registrarVenta.Enabled = false;
+                this.btn_restarStock.Enabled = false;
+                this.btn_ventas.Enabled = false;
+                await Task.Run(() =>
                 {
-                    ex = ex.InnerException;
-                    sb.AppendLine(ex.Message);
-                }
+                    Thread.Sleep(1500);
+                    List<Producto> lista = BaseDatos.TraerProductos();
+                    if (this.btn_agregarProducto.InvokeRequired) // uno de los tantos botones que generó el main task
+                    {
+                        this.btn_agregarProducto.BeginInvoke(new Action(() => 
+                        {
+                            EvaluarConexionBDD(lista, HabilitarControles, NotificarConexionFallida);
+                        }));
+                    }
+                }, cts.Token);
+            //} 
+            //catch (Exception ex)
+            //{
+            //    StringBuilder sb = new StringBuilder();
+            //    sb.AppendLine(ex.Message);
+            //    while (ex.InnerException != null)
+            //    {
+            //        ex = ex.InnerException;
+            //        sb.AppendLine(ex.Message);
+            //    }
 
-                MessageBox.Show(sb.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    MessageBox.Show(sb.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
+        private void EvaluarConexionBDD(List<Producto> lista, EstadoConexionBBDD funcBien, EstadoConexionBBDD funcMal)
+        {
+            if (lista != null)
+            {
+                Logica.ActualizarDGV(dgv_productos, lista);
+                funcBien("Conexion establecida");
+            } else
+            {
+                funcMal("Conexión fallida");
             }
+        }
+
+        private void HabilitarControles(string mensaje)
+        {
+            this.lbl_cargando.Text = mensaje;
+            this.btn_agregarProducto.Enabled = true;
+            this.btn_agregarStock.Enabled = true;
+            this.btn_bajaProducto.Enabled = true;
+            this.btn_cambiarPrecio.Enabled = true;
+            this.btn_cancelarVenta.Enabled = true;
+            this.btn_registrarVenta.Enabled = true;
+            this.btn_restarStock.Enabled = true;
+            this.btn_ventas.Enabled = true;
+        }
+
+        private void NotificarConexionFallida(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Error en conexión", 
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.lbl_cargando.Text = mensaje;
         }
 
         private void dgv_productos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -272,20 +329,6 @@ namespace Formularios
             }
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            if (carritoProductos.Count == 0)
-            {
-                Archivo<List<Producto>>.EscribirJson("ListaProductos", Kiosko.listaProductos);
-                Archivo<List<Venta>>.EscribirXml("ListaVentas", Kiosko.registroVentas);
-            } else
-            {
-                MessageBox.Show("Guarde antes o después de finalizar una venta por favor.",
-                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
-        }
-
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -300,14 +343,17 @@ namespace Formularios
             }
             else
             {
+                cts.Cancel();
                 this.Dispose();
             }
         }
 
         private void AvisarQueNoHayStock(string descripcionProducto)
         {
-            MessageBox.Show($"Luego de esta operación, {descripcionProducto} no tiene más stock!\n" +
+            MessageBox.Show($"{descripcionProducto} no tiene más stock!\n" +
                 $"Comunicarse con el proveedor correspondiente.");
         }
+
+       
     }
 }

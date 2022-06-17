@@ -19,7 +19,7 @@ namespace Entidades
         private string descripcion;
         private float precioUnitario;
         private int cantidad;
-        public event StockAcabadoHandler onStockAcabado;
+        public event StockAcabado onStockAcabado;
 
         public int Id { get { return id; } set { id = value; } }
 

@@ -14,7 +14,7 @@ namespace Entidades
 
         static BaseDatos() 
         {
-            conexion = new SqlConnection(@"Data Source=.;Initial Catalog=PRUEBAS;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=.;Initial Catalog=PRUEBA;Integrated Security=True");
             comando = new SqlCommand();
             comando.CommandType = System.Data.CommandType.Text;
             comando.Connection = conexion;
@@ -49,7 +49,13 @@ namespace Entidades
             }
             catch (Exception ex)
             {
-                throw new Exception("Error el traer lista de productos desde BBDD", ex);
+                if (System.Threading.Thread.CurrentThread.ManagedThreadId == 0)
+                {
+                    throw new Exception("Error el traer lista de productos desde BBDD", ex);
+                } else
+                {
+                    return null;
+                }
             }
             finally 
             { 

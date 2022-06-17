@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public delegate void StockAcabadoHandler(string datosProducto);
+    public delegate void StockAcabado(string datosProducto);
 
-
+    public delegate void EstadoConexionBBDD(string mensaje);
 }

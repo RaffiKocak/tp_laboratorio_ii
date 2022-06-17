@@ -35,7 +35,6 @@
             this.btn_bajaProducto = new System.Windows.Forms.Button();
             this.btn_agregarStock = new System.Windows.Forms.Button();
             this.btn_restarStock = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.lst_venta = new System.Windows.Forms.ListBox();
             this.btn_registrarVenta = new System.Windows.Forms.Button();
             this.btn_cancelarVenta = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_kiosko = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.lbl_cargando = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,16 +124,6 @@
             this.btn_restarStock.Text = "Restar stock";
             this.btn_restarStock.UseVisualStyleBackColor = true;
             this.btn_restarStock.Click += new System.EventHandler(this.btn_restarStock_Click);
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Location = new System.Drawing.Point(528, 348);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(289, 40);
-            this.btn_guardar.TabIndex = 7;
-            this.btn_guardar.Text = "Guardar cambios";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // lst_venta
             // 
@@ -221,11 +211,21 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // lbl_cargando
+            // 
+            this.lbl_cargando.AutoSize = true;
+            this.lbl_cargando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_cargando.Location = new System.Drawing.Point(587, 359);
+            this.lbl_cargando.Name = "lbl_cargando";
+            this.lbl_cargando.Size = new System.Drawing.Size(0, 17);
+            this.lbl_cargando.TabIndex = 21;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 398);
+            this.Controls.Add(this.lbl_cargando);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.lbl_kiosko);
             this.Controls.Add(this.label1);
@@ -235,7 +235,6 @@
             this.Controls.Add(this.btn_cancelarVenta);
             this.Controls.Add(this.btn_registrarVenta);
             this.Controls.Add(this.lst_venta);
-            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_restarStock);
             this.Controls.Add(this.btn_agregarStock);
             this.Controls.Add(this.btn_bajaProducto);
@@ -264,7 +263,6 @@
         private System.Windows.Forms.Button btn_bajaProducto;
         private System.Windows.Forms.Button btn_agregarStock;
         private System.Windows.Forms.Button btn_restarStock;
-        private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.ListBox lst_venta;
         private System.Windows.Forms.Button btn_registrarVenta;
         private System.Windows.Forms.Button btn_cancelarVenta;
@@ -274,5 +272,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_kiosko;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Label lbl_cargando;
     }
 }
