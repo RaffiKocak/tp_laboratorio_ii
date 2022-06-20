@@ -14,12 +14,17 @@ namespace Entidades
 
         static BaseDatos() 
         {
-            conexion = new SqlConnection(@"Data Source=.;Initial Catalog=PRUEBA;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=.;Initial Catalog=TP4_RAFFI_KOCAK;Integrated Security=True");
             comando = new SqlCommand();
             comando.CommandType = System.Data.CommandType.Text;
             comando.Connection = conexion;
         }
 
+        /// <summary>
+        /// Conecta con la base de datos y retorna una lista con todos los productos que se encuentran en ella.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static List<Producto> TraerProductos()
         {
             try
@@ -41,7 +46,7 @@ namespace Entidades
                                 float.Parse(dataReader["Precio"].ToString()),
                                 Convert.ToInt32(dataReader["Cantidad"]));
 
-                        productoDesdeBase.Id = Convert.ToInt32(dataReader["Id"]);
+                        productoDesdeBase.Id = Convert.ToInt32(dataReader["ID"]);
                         listaProductos.Add(productoDesdeBase);
                     }
                     return listaProductos;
@@ -54,7 +59,7 @@ namespace Entidades
                     throw new Exception("Error el traer lista de productos desde BBDD", ex);
                 } else
                 {
-                    return null;
+                    return null; // Sí se ejecuta en otro hilo, me retorna NULL y maneja la exc en ese hilo
                 }
             }
             finally 
@@ -63,6 +68,12 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Modifica el precio del producto deseado según el ID ingresado por parámetro.
+        /// </summary>
+        /// <param name="idProducto"></param>
+        /// <param name="nuevoPrecio"></param>
+        /// <exception cref="Exception"></exception>
         public static void ModificarPrecioProducto(int idProducto, float nuevoPrecio)
         {
             try
@@ -88,6 +99,12 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Modifica la cantidad en stock del producto deseado según el ID ingresado por parámetro
+        /// </summary>
+        /// <param name="idProducto"></param>
+        /// <param name="nuevaCantidad"></param>
+        /// <exception cref="Exception"></exception>
         public static void ModificarCantidadProducto(int idProducto, int nuevaCantidad)
         {
             try
@@ -113,6 +130,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Borra el producto deseado según el ID ingresado por parámetro
+        /// </summary>
+        /// <param name="idProducto"></param>
+        /// <exception cref="Exception"></exception>
         public static void BorrarProducto(int idProducto)
         {
             try
@@ -137,6 +159,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Agrega el producto ingresado por parámetro a la base de datos.
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <exception cref="Exception"></exception>
         public static void AgregarProducto(Producto producto)
         {
             try
@@ -165,6 +192,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Agrega la venta ingresada por parámetro a la base de datos
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <exception cref="Exception"></exception>
         public static void AgregarVenta(Venta venta)
         {
             try
@@ -192,6 +224,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Conecta con la base de datos y retorna una lista con todas las ventas que se encuentran en ella.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static List<Venta> TraerVentas()
         {
             try

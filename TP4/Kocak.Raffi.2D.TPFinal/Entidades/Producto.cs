@@ -185,23 +185,30 @@ namespace Entidades
         /// <param name="carrito"></param>
         public static void DevolverProductosAStock(List<Producto> carrito)
         {
-            List<Producto> listaProductosBBDD = BaseDatos.TraerProductos();
-
-            if (carrito != null && carrito.Count > 0)
+            try
             {
-                foreach (Producto itemCarrito in carrito)
+                List<Producto> listaProductosBBDD = BaseDatos.TraerProductos();
+
+                if (carrito != null && carrito.Count > 0)
                 {
-                    foreach (Producto itemStock in listaProductosBBDD)
+                    foreach (Producto itemCarrito in carrito)
                     {
-                        if (itemStock.id == itemCarrito.id)
+                        foreach (Producto itemStock in listaProductosBBDD)
                         {
-                            itemStock.cantidad += itemCarrito.cantidad;
-                            BaseDatos.ModificarCantidadProducto(itemStock.Id, itemStock.Cantidad);
-                            break;
+                            if (itemStock.id == itemCarrito.id)
+                            {
+                                itemStock.cantidad += itemCarrito.cantidad;
+                                BaseDatos.ModificarCantidadProducto(itemStock.Id, itemStock.Cantidad);
+                                break;
+                            }
                         }
                     }
                 }
+            } catch (Exception ex)
+            {
+                throw new Exception("Error al devolver los productos del carrito al stock", ex);
             }
+            
         }
 
         /// <summary>

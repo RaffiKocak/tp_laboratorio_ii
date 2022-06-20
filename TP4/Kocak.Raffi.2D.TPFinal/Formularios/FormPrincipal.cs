@@ -30,45 +30,39 @@ namespace Formularios
 
         private async void FormPrincipal_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-                cts = new CancellationTokenSource();
-                this.lbl_cargando.Text = "Conectando con base de datos...";
-                this.btn_agregarProducto.Enabled = false;
-                this.btn_agregarStock.Enabled = false;
-                this.btn_bajaProducto.Enabled = false;
-                this.btn_cambiarPrecio.Enabled = false;
-                this.btn_cancelarVenta.Enabled = false;
-                this.btn_registrarVenta.Enabled = false;
-                this.btn_restarStock.Enabled = false;
-                this.btn_ventas.Enabled = false;
-                await Task.Run(() =>
+            cts = new CancellationTokenSource();
+            this.lbl_cargando.Text = "Conectando con base de datos...";
+            this.dgv_productos.Enabled = false;
+            this.lst_venta.Enabled = false;
+            this.btn_agregarProducto.Enabled = false;
+            this.btn_agregarStock.Enabled = false;
+            this.btn_bajaProducto.Enabled = false;
+            this.btn_cambiarPrecio.Enabled = false;
+            this.btn_cancelarVenta.Enabled = false;
+            this.btn_registrarVenta.Enabled = false;
+            this.btn_restarStock.Enabled = false;
+            this.btn_ventas.Enabled = false;
+            await Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                List<Producto> lista = BaseDatos.TraerProductos();
+                if (this.btn_agregarProducto.InvokeRequired) // uno de los tantos botones que generó el hilo principal
                 {
-                    Thread.Sleep(1500);
-                    List<Producto> lista = BaseDatos.TraerProductos();
-                    if (this.btn_agregarProducto.InvokeRequired) // uno de los tantos botones que generó el main task
+                    this.btn_agregarProducto.BeginInvoke(new Action(() => 
                     {
-                        this.btn_agregarProducto.BeginInvoke(new Action(() => 
-                        {
-                            EvaluarConexionBDD(lista, HabilitarControles, NotificarConexionFallida);
-                        }));
-                    }
-                }, cts.Token);
-            //} 
-            //catch (Exception ex)
-            //{
-            //    StringBuilder sb = new StringBuilder();
-            //    sb.AppendLine(ex.Message);
-            //    while (ex.InnerException != null)
-            //    {
-            //        ex = ex.InnerException;
-            //        sb.AppendLine(ex.Message);
-            //    }
-
-            //    MessageBox.Show(sb.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                        EvaluarConexionBDD(lista, HabilitarControles, NotificarConexionFallida);
+                    }));
+                }
+            }, cts.Token);
         }
 
+        /// <summary>
+        /// Ejecuta las funciones ingresadas por parámetro según el estado de la lista de productos traída desde
+        /// la base de datos.
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <param name="funcBien"></param>
+        /// <param name="funcMal"></param>
         private void EvaluarConexionBDD(List<Producto> lista, EstadoConexionBBDD funcBien, EstadoConexionBBDD funcMal)
         {
             if (lista != null)
@@ -81,9 +75,15 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Habilita los controles bloqueados del formulario y esconde el mensaje exitoso después de 1 segundo.
+        /// </summary>
+        /// <param name="mensaje"></param>
         private void HabilitarControles(string mensaje)
         {
             this.lbl_cargando.Text = mensaje;
+            this.dgv_productos.Enabled = true;
+            this.lst_venta.Enabled = true;
             this.btn_agregarProducto.Enabled = true;
             this.btn_agregarStock.Enabled = true;
             this.btn_bajaProducto.Enabled = true;
@@ -92,11 +92,26 @@ namespace Formularios
             this.btn_registrarVenta.Enabled = true;
             this.btn_restarStock.Enabled = true;
             this.btn_ventas.Enabled = true;
+            Task.Run(() =>
+            {
+                Thread.Sleep(2000);
+                if (this.lbl_cargando.InvokeRequired)
+                {
+                    this.lbl_cargando.BeginInvoke(new Action(() =>
+                    {
+                        this.lbl_cargando.Visible = false;
+                    }));
+                }
+            });
         }
 
+        /// <summary>
+        /// Informa que la conexión a la BBDD falló
+        /// </summary>
+        /// <param name="mensaje"></param>
         private void NotificarConexionFallida(string mensaje)
         {
-            MessageBox.Show(mensaje, "Error en conexión", 
+            MessageBox.Show(mensaje + ". Verifique su conexión y reinicie el programa.", "Error en conexión", 
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.lbl_cargando.Text = mensaje;
         }
@@ -175,8 +190,23 @@ namespace Formularios
         /// </summary>
         private void CancelarVenta()
         {
-            Producto.DevolverProductosAStock(carritoProductos);
-            FinalizarVenta();
+            try
+            {
+                Producto.DevolverProductosAStock(carritoProductos);
+                FinalizarVenta();
+            } catch(Exception ex)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(ex.Message);
+                while (ex.InnerException != null)
+                {
+                    ex = ex.InnerException;
+                    sb.AppendLine(ex.Message);
+                }
+
+                MessageBox.Show(sb.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btn_ventas_Click(object sender, EventArgs e)
@@ -344,10 +374,18 @@ namespace Formularios
             else
             {
                 cts.Cancel();
+                if (this.carritoProductos.Count > 0)
+                {
+                    CancelarVenta();
+                }
                 this.Dispose();
             }
         }
 
+        /// <summary>
+        /// Este método fue creado para ser asociado al evento de un producto, cuando este ya no tiene más cantidad en stock.
+        /// </summary>
+        /// <param name="descripcionProducto"></param>
         private void AvisarQueNoHayStock(string descripcionProducto)
         {
             MessageBox.Show($"{descripcionProducto} no tiene más stock!\n" +

@@ -12,10 +12,4 @@
     <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="ultimoIdVenta.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

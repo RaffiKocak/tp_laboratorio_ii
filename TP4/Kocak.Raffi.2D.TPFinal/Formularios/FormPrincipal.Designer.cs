@@ -52,8 +52,10 @@
             // 
             this.dgv_productos.AllowUserToAddRows = false;
             this.dgv_productos.AllowUserToDeleteRows = false;
+            this.dgv_productos.AllowUserToResizeRows = false;
             this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_productos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_productos.Location = new System.Drawing.Point(15, 40);
             this.dgv_productos.MultiSelect = false;
             this.dgv_productos.Name = "dgv_productos";
@@ -67,66 +69,97 @@
             // 
             // btn_ventas
             // 
+            this.btn_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_ventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ventas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ventas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_ventas.Location = new System.Drawing.Point(15, 289);
             this.btn_ventas.Name = "btn_ventas";
             this.btn_ventas.Size = new System.Drawing.Size(147, 40);
             this.btn_ventas.TabIndex = 1;
             this.btn_ventas.Text = "Ventas";
-            this.btn_ventas.UseVisualStyleBackColor = true;
+            this.btn_ventas.UseVisualStyleBackColor = false;
             this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
             // btn_cambiarPrecio
             // 
+            this.btn_cambiarPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_cambiarPrecio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cambiarPrecio.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cambiarPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cambiarPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_cambiarPrecio.Location = new System.Drawing.Point(15, 348);
             this.btn_cambiarPrecio.Name = "btn_cambiarPrecio";
             this.btn_cambiarPrecio.Size = new System.Drawing.Size(147, 40);
             this.btn_cambiarPrecio.TabIndex = 2;
             this.btn_cambiarPrecio.Text = "Cambiar precio unitario";
-            this.btn_cambiarPrecio.UseVisualStyleBackColor = true;
+            this.btn_cambiarPrecio.UseVisualStyleBackColor = false;
             this.btn_cambiarPrecio.Click += new System.EventHandler(this.btn_cambiarPrecio_Click);
             // 
             // btn_agregarProducto
             // 
+            this.btn_agregarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_agregarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregarProducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_agregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_agregarProducto.Location = new System.Drawing.Point(186, 289);
             this.btn_agregarProducto.Name = "btn_agregarProducto";
             this.btn_agregarProducto.Size = new System.Drawing.Size(147, 40);
             this.btn_agregarProducto.TabIndex = 3;
             this.btn_agregarProducto.Text = "Agregar producto";
-            this.btn_agregarProducto.UseVisualStyleBackColor = true;
+            this.btn_agregarProducto.UseVisualStyleBackColor = false;
             this.btn_agregarProducto.Click += new System.EventHandler(this.btn_agregarProducto_Click);
             // 
             // btn_bajaProducto
             // 
+            this.btn_bajaProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_bajaProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bajaProducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_bajaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bajaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_bajaProducto.Location = new System.Drawing.Point(186, 348);
             this.btn_bajaProducto.Name = "btn_bajaProducto";
             this.btn_bajaProducto.Size = new System.Drawing.Size(147, 40);
             this.btn_bajaProducto.TabIndex = 4;
             this.btn_bajaProducto.Text = "Dar de baja producto";
-            this.btn_bajaProducto.UseVisualStyleBackColor = true;
+            this.btn_bajaProducto.UseVisualStyleBackColor = false;
             this.btn_bajaProducto.Click += new System.EventHandler(this.btn_bajaProducto_Click);
             // 
             // btn_agregarStock
             // 
+            this.btn_agregarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_agregarStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregarStock.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_agregarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregarStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_agregarStock.Location = new System.Drawing.Point(354, 289);
             this.btn_agregarStock.Name = "btn_agregarStock";
             this.btn_agregarStock.Size = new System.Drawing.Size(147, 40);
             this.btn_agregarStock.TabIndex = 5;
             this.btn_agregarStock.Text = "Agregar stock";
-            this.btn_agregarStock.UseVisualStyleBackColor = true;
+            this.btn_agregarStock.UseVisualStyleBackColor = false;
             this.btn_agregarStock.Click += new System.EventHandler(this.btn_agregarStock_Click);
             // 
             // btn_restarStock
             // 
+            this.btn_restarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_restarStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_restarStock.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_restarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_restarStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_restarStock.Location = new System.Drawing.Point(354, 348);
             this.btn_restarStock.Name = "btn_restarStock";
             this.btn_restarStock.Size = new System.Drawing.Size(147, 40);
             this.btn_restarStock.TabIndex = 6;
             this.btn_restarStock.Text = "Restar stock";
-            this.btn_restarStock.UseVisualStyleBackColor = true;
+            this.btn_restarStock.UseVisualStyleBackColor = false;
             this.btn_restarStock.Click += new System.EventHandler(this.btn_restarStock_Click);
             // 
             // lst_venta
             // 
+            this.lst_venta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lst_venta.FormattingEnabled = true;
             this.lst_venta.HorizontalScrollbar = true;
             this.lst_venta.ItemHeight = 15;
@@ -138,27 +171,37 @@
             // 
             // btn_registrarVenta
             // 
+            this.btn_registrarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_registrarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrarVenta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_registrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrarVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_registrarVenta.Location = new System.Drawing.Point(528, 289);
             this.btn_registrarVenta.Name = "btn_registrarVenta";
             this.btn_registrarVenta.Size = new System.Drawing.Size(134, 40);
             this.btn_registrarVenta.TabIndex = 11;
             this.btn_registrarVenta.Text = "Registrar Venta";
-            this.btn_registrarVenta.UseVisualStyleBackColor = true;
+            this.btn_registrarVenta.UseVisualStyleBackColor = false;
             this.btn_registrarVenta.Click += new System.EventHandler(this.btn_registrarVenta_Click);
             // 
             // btn_cancelarVenta
             // 
+            this.btn_cancelarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_cancelarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelarVenta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelarVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_cancelarVenta.Location = new System.Drawing.Point(683, 289);
             this.btn_cancelarVenta.Name = "btn_cancelarVenta";
             this.btn_cancelarVenta.Size = new System.Drawing.Size(134, 40);
             this.btn_cancelarVenta.TabIndex = 13;
             this.btn_cancelarVenta.Text = "Cancelar Venta";
-            this.btn_cancelarVenta.UseVisualStyleBackColor = true;
+            this.btn_cancelarVenta.UseVisualStyleBackColor = false;
             this.btn_cancelarVenta.Click += new System.EventHandler(this.btn_cancelarVenta_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
             this.panel1.Location = new System.Drawing.Point(507, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(15, 398);
@@ -167,6 +210,7 @@
             // lbl_totalParcial
             // 
             this.lbl_totalParcial.AutoSize = true;
+            this.lbl_totalParcial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_totalParcial.Location = new System.Drawing.Point(528, 258);
             this.lbl_totalParcial.Name = "lbl_totalParcial";
             this.lbl_totalParcial.Size = new System.Drawing.Size(73, 15);
@@ -176,6 +220,7 @@
             // lbl_precioParcial
             // 
             this.lbl_precioParcial.AutoSize = true;
+            this.lbl_precioParcial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_precioParcial.Location = new System.Drawing.Point(607, 258);
             this.lbl_precioParcial.Name = "lbl_precioParcial";
             this.lbl_precioParcial.Size = new System.Drawing.Size(19, 15);
@@ -185,6 +230,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.label1.Location = new System.Drawing.Point(528, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 15);
@@ -195,6 +241,7 @@
             // 
             this.lbl_kiosko.AutoSize = true;
             this.lbl_kiosko.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_kiosko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_kiosko.Location = new System.Drawing.Point(12, 9);
             this.lbl_kiosko.Name = "lbl_kiosko";
             this.lbl_kiosko.Size = new System.Drawing.Size(69, 25);
@@ -203,18 +250,23 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_cerrar.Location = new System.Drawing.Point(808, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(21, 23);
             this.btn_cerrar.TabIndex = 20;
             this.btn_cerrar.Text = "X";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // lbl_cargando
             // 
             this.lbl_cargando.AutoSize = true;
             this.lbl_cargando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_cargando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_cargando.Location = new System.Drawing.Point(587, 359);
             this.lbl_cargando.Name = "lbl_cargando";
             this.lbl_cargando.Size = new System.Drawing.Size(0, 17);
@@ -224,6 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
             this.ClientSize = new System.Drawing.Size(829, 398);
             this.Controls.Add(this.lbl_cargando);
             this.Controls.Add(this.btn_cerrar);

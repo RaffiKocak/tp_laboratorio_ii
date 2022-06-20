@@ -56,17 +56,22 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(192)))), ((int)(((byte)(249)))));
+            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.btn_cerrar.Location = new System.Drawing.Point(591, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(21, 23);
             this.btn_cerrar.TabIndex = 7;
             this.btn_cerrar.Text = "X";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // lbl_textoRecaudacion
             // 
             this.lbl_textoRecaudacion.AutoSize = true;
+            this.lbl_textoRecaudacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_textoRecaudacion.Location = new System.Drawing.Point(12, 274);
             this.lbl_textoRecaudacion.Name = "lbl_textoRecaudacion";
             this.lbl_textoRecaudacion.Size = new System.Drawing.Size(131, 15);
@@ -76,6 +81,7 @@
             // lbl_recaudacion
             // 
             this.lbl_recaudacion.AutoSize = true;
+            this.lbl_recaudacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_recaudacion.Location = new System.Drawing.Point(176, 274);
             this.lbl_recaudacion.Name = "lbl_recaudacion";
             this.lbl_recaudacion.Size = new System.Drawing.Size(19, 15);
@@ -85,6 +91,7 @@
             // lbl_textoCantidad
             // 
             this.lbl_textoCantidad.AutoSize = true;
+            this.lbl_textoCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_textoCantidad.Location = new System.Drawing.Point(61, 248);
             this.lbl_textoCantidad.Name = "lbl_textoCantidad";
             this.lbl_textoCantidad.Size = new System.Drawing.Size(82, 15);
@@ -94,6 +101,7 @@
             // lbl_cantidad
             // 
             this.lbl_cantidad.AutoSize = true;
+            this.lbl_cantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(72)))), ((int)(((byte)(227)))));
             this.lbl_cantidad.Location = new System.Drawing.Point(176, 248);
             this.lbl_cantidad.Name = "lbl_cantidad";
             this.lbl_cantidad.Size = new System.Drawing.Size(13, 15);
@@ -104,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
             this.ClientSize = new System.Drawing.Size(612, 309);
             this.Controls.Add(this.lbl_cantidad);
             this.Controls.Add(this.lbl_textoCantidad);

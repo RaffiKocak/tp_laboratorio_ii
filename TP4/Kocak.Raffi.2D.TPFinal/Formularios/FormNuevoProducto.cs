@@ -37,7 +37,7 @@ namespace Formularios
                 cantidad = Validacion.ValidarCantidad(this.txt_cantidad.Text);
 
                 Producto nuevoProducto = new Producto((Producto.TipoProducto)this.cmb_tipo.SelectedItem,
-                this.txt_descripcion.Text, precioNuevoProducto, cantidad);
+                this.txt_descripcion.Text.FormatearDescripcionProducto(), precioNuevoProducto, cantidad);
 
                 BaseDatos.AgregarProducto(nuevoProducto);
 
@@ -84,7 +84,5 @@ namespace Formularios
                 }
             }
         }
-
-        
     }
 }
